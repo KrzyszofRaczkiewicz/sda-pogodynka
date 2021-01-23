@@ -14,13 +14,11 @@ public class Main {
             int menu = scanner.nextInt();
 
             switch (menu) {
-                case 1:
-
+                case 1: // dodaj lokalizacje
                     break;
-                case 2:
-
+                case 2: // lista lokalizacji
                     break;
-                case 3:
+                case 3: // aktualizacja danych lokalizacji
                     break;
                 case 0:
                     return;
