@@ -6,6 +6,6 @@
         <property name="connection.username">root</property>
         <property name="connection.password">Kr729467!!</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.sda.diary.backend.Entry"/>
+        <mapping class="com.sda.diary.backend.Entry"/> // todo what is this?
     </session-factory>
 </hibernate-configuration>

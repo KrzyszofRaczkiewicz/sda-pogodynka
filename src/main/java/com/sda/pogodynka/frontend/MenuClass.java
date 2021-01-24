@@ -1,18 +1,18 @@
 package com.sda.pogodynka.frontend;
 
-import java.util.Scanner;
+import java.util.Scanner; // todo unnecessary import
 
 public class MenuClass {
 
-    public static void getMenuInfo(){
+    public static void getMenuInfo() { // todo make private, move at the bottom
         System.out.println("POGODYNKA 1.0");
         System.out.println("1 - Dodaj lokalizacje do bazy danych");
         System.out.println("2 - Lista zapisanych lokalizacji");
-        System.out.println("3 - Aktualizuj dane lokalizacji");
+        System.out.println("3 - Aktualizuj dane lokalizacji"); // todo incorrect option, we want to obtain a forecast of a weather
         System.out.println("0 - ZAKOŃCZ DZIAŁANIE PROGRAMU");
     }
 
-    public static void getMenu(){
+    public static void getMenu() {
         while (true) {
             getMenuInfo();
 
