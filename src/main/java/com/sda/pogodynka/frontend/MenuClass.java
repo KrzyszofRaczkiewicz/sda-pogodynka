@@ -14,7 +14,7 @@ public class MenuClass {
         System.out.println("0 - Kill Manager... WeatherManager....");
     }
 
-    public static void getMenu(LocationController locationController) {
+    public static void getMenu(LocationController locationController) throws Exception {
         while (true) {
             getMenuInfo();
 
@@ -26,7 +26,7 @@ public class MenuClass {
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
-                    System.out.println("Location list");
+                    System.out.println("Show all location");
                     System.out.println("----------------------------------");
                     break;
                 case "3": // aktualizacja danych lokalizacji
@@ -42,14 +42,14 @@ public class MenuClass {
         }
     }
 
-    private static void addNewLocation(LocationController locationController) {
+    private static void addNewLocation(LocationController locationController) throws Exception {
         int dataCorrect = 0;
         String city;
-        int height=0;
-        int width=0;
+        int height = 0;
+        int width = 0;
         String region;
         String country;
-        do{
+        do {
             System.out.println("ADDING NEW LOCATION");
             city = MenuUtils.getStringInfo("Name of the city (required):");
             height = MenuUtils.getIntInfo("Give geographic height (required), format: -S, N:");
@@ -58,17 +58,17 @@ public class MenuClass {
             country = MenuUtils.getStringInfo("Give country name (required):");
 
             System.out.println("---INPUT DATA---:");
-            System.out.println("City: "+city);
-            if(height>0)    System.out.println("Geographic height: "+height+"N");
-            else            System.out.println("Geographic height: "+height+"S");
-            if(width>0)     System.out.println("Geographic width: "+width+"E");
-            else            System.out.println("Geographic width: "+width+"W");
-            System.out.println("Region: "+region);
-            System.out.println("Country: "+country);
+            System.out.println("City: " + city);
+            if (height > 0) System.out.println("Geographic height: " + height + "N");
+            else System.out.println("Geographic height: " + height + "S");
+            if (width > 0) System.out.println("Geographic width: " + width + "E");
+            else System.out.println("Geographic width: " + width + "W");
+            System.out.println("Region: " + region);
+            System.out.println("Country: " + country);
             System.out.println("Data correct?\n1 - YAA, 0 - NEE");
 
             dataCorrect = MenuUtils.getIntInfo("");
-        } while (dataCorrect==0);
+        } while (dataCorrect == 0);
 
         locationController.createNewLocation(city, height, width, region, country);
 
