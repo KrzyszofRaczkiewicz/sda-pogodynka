@@ -47,7 +47,7 @@ public class LocationServiceTest {
     @Test
     void createLocation_whenHeightIsLessThan90negative_throwsAnException() {
         // when
-        Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", -91, 50, "Pomorskie", "Polska"));
+        Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", -91, 90, "Pomorskie", "Polska"));
 
         // then
         assertThat(throwable).isInstanceOf(RuntimeException.class);

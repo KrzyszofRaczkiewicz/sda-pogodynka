@@ -43,31 +43,31 @@ public class MenuClass {
     }
 
     private static void addNewLocation(LocationController locationController) {
-        int dataCorrect = 0;
+        float dataCorrect = 0;
         String city;
-        int height = 0;
-        int width = 0;
+        float height = 0;
+        float width = 0;
         String region;
         String country;
         do {
             System.out.println("ADDING NEW LOCATION");
             city = MenuUtils.getStringInfo("Name of the city (required):");
-            height = MenuUtils.getIntInfo("Give geographic height (required), format: -S, N:");
-            width = MenuUtils.getIntInfo("Give geographic width (required), format: -W, E:");
+            height = MenuUtils.getFloatInfo("Give geographic height (required), format: -S, N:");
+            width = MenuUtils.getFloatInfo("Give geographic width (required), format: -W, E:");
             region = MenuUtils.getStringInfo("Give region (optional - none):");
             country = MenuUtils.getStringInfo("Give country name (required):");
 
             System.out.println("---INPUT DATA---:");
             System.out.println("City: " + city);
-            if (height > 0) System.out.println("Geographic height: " + height + "N");
+            if (height > 0f) System.out.println("Geographic height: " + height + "N");
             else System.out.println("Geographic height: " + height + "S");
-            if (width > 0) System.out.println("Geographic width: " + width + "E");
+            if (width > 0f) System.out.println("Geographic width: " + width + "E");
             else System.out.println("Geographic width: " + width + "W");
             System.out.println("Region: " + region);
             System.out.println("Country: " + country);
             System.out.println("Data correct?\n1 - YAA, 0 - NEE");
 
-            dataCorrect = MenuUtils.getIntInfo("");
+            dataCorrect = MenuUtils.getFloatInfo("");
         } while (dataCorrect == 0);
 
         locationController.createNewLocation(city, height, width, region, country);

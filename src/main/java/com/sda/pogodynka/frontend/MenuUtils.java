@@ -10,15 +10,15 @@ public class MenuUtils {
         return scanner.next();
     }
 
-    public static int getIntInfo(String message) {
+    public static float getFloatInfo(String message) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(message);
-        int val=0;
+        float val=0;
         try {
-            val = scanner.nextInt();
+            val = scanner.nextFloat();
         } catch (Exception e) {
             System.out.println("Incorrect value!");
-            getIntInfo(message);
+            getFloatInfo(message);
         }
         return val;
     }

@@ -8,7 +8,7 @@ public class LocationService {
         this.locationDAO = locationDAO;
     }
 
-    public Location createLocation(String city, int height, int width, String region, String country) {
+    public Location createLocation(String city, float height, float width, String region, String country) {
 
         if(city.isBlank() || country.isBlank() || city==null || country==null){
             throw new RuntimeException("Nazwa miasta i kraju nie może być pusta!!!");

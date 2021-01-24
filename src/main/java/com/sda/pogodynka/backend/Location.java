@@ -10,14 +10,14 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String city;
-    private int geoWidth;
-    private int geoHight;
+    private float geoWidth;
+    private float geoHight;
     private String region;
     private String country;
 
     public Location(){}
 
-    public Location(String city, int geoWidth, int geoHight, String region, String country) {
+    public Location(String city, float geoWidth, float geoHight, String region, String country) {
         this.city = city;
         this.geoWidth = geoWidth;
         this.geoHight = geoHight;
