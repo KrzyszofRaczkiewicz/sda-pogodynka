@@ -42,10 +42,10 @@ public class MenuClass {
 
     private static void addNewLocation() {
         System.out.println("DODAJEMY NOWĄ LAKALIZACJE");
-        MenuUtils.getStringInfo("Podaj nazwę miasta:");
-        MenuUtils.getStringInfo("Podaj szerokość geograficzną, format: S, N:");
-        MenuUtils.getStringInfo("Podaj długość geograficzną, format: W, E:");
-        MenuUtils.getStringInfo("Podaj region:");
-        MenuUtils.getStringInfo("Podaj nazwę kraju:");
+        MenuUtils.getStringInfo("Podaj nazwę miasta (wymagane):");
+        MenuUtils.getStringInfo("Podaj szerokość geograficzną (wymagane), format: S, N:");
+        MenuUtils.getStringInfo("Podaj długość geograficzną (wymagane), format: W, E:");
+        MenuUtils.getStringInfo("Podaj region (opcjonalnie - brak):");
+        MenuUtils.getStringInfo("Podaj nazwę kraju (wymagane):");
     }
 }
