@@ -15,11 +15,12 @@ public class MenuClass {
     public static void getMenu(){
         while (true) {
             getMenuInfo();
-            Scanner scanner = new Scanner(System.in);
-            String menu = scanner.next();
+
+            String menu = MenuUtils.getStringInfo("");
+
             switch (menu) {
                 case "1": // dodaj lokalizacje
-                    System.out.println("Dodajemy lokalizację");
+                    addNewLocation();
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
@@ -34,8 +35,17 @@ public class MenuClass {
                     System.out.println("Sajonara!!!");
                     return;
                 default:
-                    System.out.println("nie ze mną te numery Bruner....\n\n sprobuj jeszcze raz...");
+                    System.out.println("serio??? to takie trudne wybrać odpowiedni numer....\n\nsprobuj jeszcze raz...");
             }
         }
+    }
+
+    private static void addNewLocation() {
+        System.out.println("DODAJEMY NOWĄ LAKALIZACJE");
+        MenuUtils.getStringInfo("Podaj nazwę miasta:");
+        MenuUtils.getStringInfo("Podaj szerokość geograficzną, format: S, N:");
+        MenuUtils.getStringInfo("Podaj długość geograficzną, format: W, E:");
+        MenuUtils.getStringInfo("Podaj region:");
+        MenuUtils.getStringInfo("Podaj nazwę kraju:");
     }
 }

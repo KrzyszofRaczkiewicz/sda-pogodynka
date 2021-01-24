@@ -10,8 +10,10 @@ public class Location {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String miasto;
-    private String GeoWidth;
-    private String GeoHight;
+    private int geoWidthN;
+    private int geoWidthS;
+    private int geoHightE;
+    private int geoHightW;
     private String region;
     private String kraj;
     @Temporal(TemporalType.DATE)
