@@ -11,17 +11,25 @@ public class Main {
         while (true) {
             MenuClass.getMenu();
 
-            int menu = scanner.nextInt();
-
+            String menu = scanner.next();
             switch (menu) {
-                case 1: // dodaj lokalizacje
+                case "1": // dodaj lokalizacje
+                    System.out.println("Dodajemy lokalizację");
+                    System.out.println("----------------------------------");
                     break;
-                case 2: // lista lokalizacji
+                case "2": // lista lokalizacji
+                    System.out.println("Lista lokalizacji");
+                    System.out.println("----------------------------------");
                     break;
-                case 3: // aktualizacja danych lokalizacji
+                case "3": // aktualizacja danych lokalizacji
+                    System.out.println("Aktualizacja danych");
+                    System.out.println("----------------------------------");
                     break;
-                case 0:
+                case "0":
+                    System.out.println("Sajonara!!!");
                     return;
+                default:
+                    System.out.println("czytanie ze zrozumieniem leży nie?");
             }
         }
 
