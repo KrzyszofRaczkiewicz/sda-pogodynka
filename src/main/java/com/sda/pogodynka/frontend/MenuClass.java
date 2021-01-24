@@ -4,12 +4,12 @@ import java.util.Scanner; // todo unnecessary import
 
 public class MenuClass {
 
-    public static void getMenuInfo() { // todo make private, move at the bottom
-        System.out.println("POGODYNKA 1.0");
-        System.out.println("1 - Dodaj lokalizacje do bazy danych");
-        System.out.println("2 - Lista zapisanych lokalizacji");
-        System.out.println("3 - Aktualizuj dane lokalizacji"); // todo incorrect option, we want to obtain a forecast of a weather
-        System.out.println("0 - ZAKOŃCZ DZIAŁANIE PROGRAMU");
+    private static void getMenuInfo() {
+        System.out.println("Weather Manager 1.0");
+        System.out.println("1 - Add localization");
+        System.out.println("2 - Localization list");
+        System.out.println("3 - Show weather in localization");
+        System.out.println("0 - Kill Manager... WeatherManager....");
     }
 
     public static void getMenu() {
@@ -24,28 +24,28 @@ public class MenuClass {
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
-                    System.out.println("Lista lokalizacji");
+                    System.out.println("Localization list");
                     System.out.println("----------------------------------");
                     break;
                 case "3": // aktualizacja danych lokalizacji
-                    System.out.println("Aktualizacja danych");
+                    System.out.println("Weather in localization");
                     System.out.println("----------------------------------");
                     break;
                 case "0":
                     System.out.println("Sajonara!!!");
                     return;
                 default:
-                    System.out.println("serio??? to takie trudne wybrać odpowiedni numer....\n\nsprobuj jeszcze raz...");
+                    System.out.println("really??? is it so hard to choose right....\ntry again...\n");
             }
         }
     }
 
     private static void addNewLocation() {
-        System.out.println("DODAJEMY NOWĄ LAKALIZACJE");
-        MenuUtils.getStringInfo("Podaj nazwę miasta (wymagane):");
-        MenuUtils.getStringInfo("Podaj szerokość geograficzną (wymagane), format: S, N:");
-        MenuUtils.getStringInfo("Podaj długość geograficzną (wymagane), format: W, E:");
-        MenuUtils.getStringInfo("Podaj region (opcjonalnie - brak):");
-        MenuUtils.getStringInfo("Podaj nazwę kraju (wymagane):");
+        System.out.println("ADDING NEW LOCALIZATION");
+        MenuUtils.getStringInfo("Name of the city (required):");
+        MenuUtils.getStringInfo("Give geographic height (required), format: N, S:");
+        MenuUtils.getStringInfo("Give geographic width (required), format: E, W:");
+        MenuUtils.getStringInfo("Give region (optional - none):");
+        MenuUtils.getStringInfo("Give country name (required):");
     }
 }

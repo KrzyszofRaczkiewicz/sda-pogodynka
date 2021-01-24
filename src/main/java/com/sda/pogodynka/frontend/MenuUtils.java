@@ -4,15 +4,9 @@ import java.util.Scanner;
 
 public class MenuUtils {
 
-    public static String getStringInfo(String messege) { // todo messege -> message
+    public static String getStringInfo(String message) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print(messege);
+        System.out.print(message);
         return scanner.next();
-    }
-
-    public static int getIntInfo(String messege) { // todo unnecessary method
-        Scanner scanner = new Scanner(System.in);
-        System.out.print(messege);
-        return scanner.nextInt();
     }
 }
