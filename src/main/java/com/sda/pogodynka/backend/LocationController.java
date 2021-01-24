@@ -8,7 +8,7 @@ public class LocationController {
         this.locationService = locationService;
     }
 
-    public String createNewLocation(String city, int height, int width, String region, String country) throws Exception {
+    public String createNewLocation(String city, int height, int width, String region, String country) {
 
         Location newLocation = locationService.createLocation(city, height, width, region, country);
         return newLocation.toString();

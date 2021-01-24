@@ -14,7 +14,7 @@ public class MenuClass {
         System.out.println("0 - Kill Manager... WeatherManager....");
     }
 
-    public static void getMenu(LocationController locationController) throws Exception {
+    public static void getMenu(LocationController locationController) {
         while (true) {
             getMenuInfo();
 
@@ -42,7 +42,7 @@ public class MenuClass {
         }
     }
 
-    private static void addNewLocation(LocationController locationController) throws Exception {
+    private static void addNewLocation(LocationController locationController) {
         int dataCorrect = 0;
         String city;
         int height = 0;
