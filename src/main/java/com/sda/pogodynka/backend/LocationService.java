@@ -10,7 +10,7 @@ public class LocationService {
 
     public Location createLocation(String city, int height, int width, String region, String country) {
 
-        if(city.isBlank() && country.isBlank()){
+        if(city.isBlank() || country.isBlank() || city==null || country==null){
             throw new RuntimeException("Nazwa miasta i kraju nie może być pusta!!!");
         }
         if(height>90 || height<-90){

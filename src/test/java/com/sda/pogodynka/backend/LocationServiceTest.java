@@ -17,7 +17,7 @@ public class LocationServiceTest {
     }
 
     @Test
-    void createLocation_createsNewLocation() throws Exception {
+    void createLocation_createsNewLocation(){
         // when
         Location location = locationService.createLocation("Gdansk", 40, 50, "Pomorskie", "Polska");
 
@@ -28,7 +28,7 @@ public class LocationServiceTest {
     @Test
     void createLocation_whenCityHasNullValue_throwsAnException() {
         // when
-        Throwable throwable = catchThrowable(() -> locationService.createLocation("", 40, 50, "Pomorskie", "Polska"));
+        Throwable throwable = catchThrowable(() -> locationService.createLocation(null, 40, 50, "Pomorskie", "Polska"));
 
         // then
         assertThat(throwable).isInstanceOf(RuntimeException.class);
