@@ -1,20 +1,6 @@
 package com.sda.pogodynka.backend;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+public interface LocationDAO {
 
-public class LocationDAO {
-    public Location saveLocation(Location location) {
-        SessionFactory sessionFactory = HibernateUtils.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-
-        session.persist(location);
-
-        transaction.commit();
-        session.close();
-
-        return location;
-    }
+    Location saveLocation(Location location);
 }
