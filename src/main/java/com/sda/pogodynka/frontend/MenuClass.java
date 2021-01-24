@@ -1,5 +1,7 @@
 package com.sda.pogodynka.frontend;
 
+import com.sda.pogodynka.backend.LocationController;
+
 import java.util.Scanner; // todo unnecessary import
 
 public class MenuClass {
@@ -12,7 +14,7 @@ public class MenuClass {
         System.out.println("0 - Kill Manager... WeatherManager....");
     }
 
-    public static void getMenu() {
+    public static void getMenu(LocationController locationController) {
         while (true) {
             getMenuInfo();
 
@@ -20,7 +22,7 @@ public class MenuClass {
 
             switch (menu) {
                 case "1": // dodaj lokalizacje
-                    addNewLocation();
+                    addNewLocation(locationController);
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
@@ -40,15 +42,20 @@ public class MenuClass {
         }
     }
 
-    private static void addNewLocation() {
+    private static void addNewLocation(LocationController locationController) {
         int dataCorrect = 0;
+        String city;
+        int height=0;
+        int width=0;
+        String region;
+        String country;
         do{
             System.out.println("ADDING NEW LOCATION");
-            String city = MenuUtils.getStringInfo("Name of the city (required):");
-            int height = MenuUtils.getIntInfo("Give geographic height (required), format: -S, N:");
-            int width = MenuUtils.getIntInfo("Give geographic width (required), format: -W, E:");
-            String region = MenuUtils.getStringInfo("Give region (optional - none):");
-            String country = MenuUtils.getStringInfo("Give country name (required):");
+            city = MenuUtils.getStringInfo("Name of the city (required):");
+            height = MenuUtils.getIntInfo("Give geographic height (required), format: -S, N:");
+            width = MenuUtils.getIntInfo("Give geographic width (required), format: -W, E:");
+            region = MenuUtils.getStringInfo("Give region (optional - none):");
+            country = MenuUtils.getStringInfo("Give country name (required):");
 
             System.out.println("---INPUT DATA---:");
             System.out.println("City: "+city);
@@ -62,6 +69,8 @@ public class MenuClass {
 
             dataCorrect = MenuUtils.getIntInfo("");
         } while (dataCorrect==0);
+
+        locationController.createNewLocation(city, height, width, region, country);
 
         System.out.println("---LOCATION ADDED---");
     }
