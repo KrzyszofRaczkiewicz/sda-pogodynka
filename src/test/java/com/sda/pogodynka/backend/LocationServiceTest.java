@@ -36,7 +36,7 @@ public class LocationServiceTest {
 
 
     @Test
-    void createLocation_whenHeightIsMoreThen90_throwsAnException() {
+    void createLocation_whenHeightIsMoreThan90_throwsAnException() {
         // when
         Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", 91, 50, "Pomorskie", "Polska"));
 
@@ -45,7 +45,7 @@ public class LocationServiceTest {
     }
 
     @Test
-    void createLocation_whenHeightIsLessThen90negative_throwsAnException() {
+    void createLocation_whenHeightIsLessThan90negative_throwsAnException() {
         // when
         Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", -91, 50, "Pomorskie", "Polska"));
 
