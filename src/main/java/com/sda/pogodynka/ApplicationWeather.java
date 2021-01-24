@@ -16,7 +16,7 @@ public class ApplicationWeather {
         locationController = new LocationController(locationService);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         MenuClass.getMenu(locationController);
     }
 }

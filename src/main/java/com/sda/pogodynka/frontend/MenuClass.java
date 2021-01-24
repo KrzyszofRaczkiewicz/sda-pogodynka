@@ -14,7 +14,7 @@ public class MenuClass {
         System.out.println("0 - Kill Manager... WeatherManager....");
     }
 
-    public static void getMenu(LocationController locationController) {
+    public static void getMenu(LocationController locationController) throws Exception {
         while (true) {
             getMenuInfo();
 
@@ -26,7 +26,7 @@ public class MenuClass {
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
-                    System.out.println("Location list");
+                    System.out.println("Show all location");
                     System.out.println("----------------------------------");
                     break;
                 case "3": // aktualizacja danych lokalizacji
@@ -42,7 +42,7 @@ public class MenuClass {
         }
     }
 
-    private static void addNewLocation(LocationController locationController) {
+    private static void addNewLocation(LocationController locationController) throws Exception {
         int dataCorrect = 0;
         String city;
         int height = 0;

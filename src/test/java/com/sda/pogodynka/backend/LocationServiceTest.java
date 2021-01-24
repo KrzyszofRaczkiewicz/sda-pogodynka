@@ -17,7 +17,7 @@ public class LocationServiceTest {
     }
 
     @Test
-    void createLocation_createsNewLocation() {
+    void createLocation_createsNewLocation() throws Exception {
         // when
         Location location = locationService.createLocation("Gdansk", 40, 50, "Pomorskie", "Polska");
 
