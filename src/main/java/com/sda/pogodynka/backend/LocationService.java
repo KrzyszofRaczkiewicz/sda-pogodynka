@@ -1,5 +1,7 @@
 package com.sda.pogodynka.backend;
 
+import java.util.List;
+
 public class LocationService {
 
     private final LocationDAO locationDAO;
@@ -24,4 +26,8 @@ public class LocationService {
 
         return locationDAO.saveLocation(location);
     }
+
+    public List<Location> showAllLocation() {
+        return locationDAO .showAllLocations();
+        }
 }

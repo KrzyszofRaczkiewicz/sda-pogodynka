@@ -1,5 +1,6 @@
 package com.sda.pogodynka.frontend;
 
+import com.sda.pogodynka.backend.Location;
 import com.sda.pogodynka.backend.LocationController;
 
 import java.util.Scanner; // todo unnecessary import
@@ -26,7 +27,7 @@ public class MenuClass {
                     System.out.println("----------------------------------");
                     break;
                 case "2": // lista lokalizacji
-                    System.out.println("Show all location");
+                    showNewLocation(locationController);
                     System.out.println("----------------------------------");
                     break;
                 case "3": // aktualizacja danych lokalizacji
@@ -40,6 +41,11 @@ public class MenuClass {
                     System.out.println("really??? is it so hard to choose right....\ntry again...\n");
             }
         }
+    }
+
+    private static void showNewLocation(LocationController locationController) {
+        String locationInfo = locationController.showAllLocation();
+        System.out.println(locationInfo);
     }
 
     private static void addNewLocation(LocationController locationController) {

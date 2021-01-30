@@ -28,12 +28,12 @@ public class Location {
     @Override
     public String toString() {
         return "\nLocation{" +
-                "id=" + id +
-                "\n, city='" + city + '\'' +
-                "\n, geoWidth=" + geoWidth +
-                "\n, geoHight=" + geoHight +
-                "\n, region='" + region + '\'' +
-                "\n, country='" + country + '\'' +
+                "\nid=" + id +
+                "\ncity='" + city + '\'' +
+                ",\ngeoWidth=" + geoWidth +
+                ",\ngeoHight=" + geoHight +
+                ",\nregion='" + region + '\'' +
+                ",\ncountry='" + country + '\'' +
                 '}';
     }
 }
