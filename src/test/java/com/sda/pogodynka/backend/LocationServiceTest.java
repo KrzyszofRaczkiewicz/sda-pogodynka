@@ -1,5 +1,8 @@
 package com.sda.pogodynka.backend;
 
+import com.sda.pogodynka.backend.Location.Location;
+import com.sda.pogodynka.backend.Location.LocationDAO;
+import com.sda.pogodynka.backend.Location.LocationService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

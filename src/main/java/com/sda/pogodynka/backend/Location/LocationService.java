@@ -1,4 +1,7 @@
-package com.sda.pogodynka.backend;
+package com.sda.pogodynka.backend.Location;
+
+import com.sda.pogodynka.backend.Location.Location;
+import com.sda.pogodynka.backend.Location.LocationDAO;
 
 import java.util.List;
 

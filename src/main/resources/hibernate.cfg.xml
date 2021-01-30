@@ -6,6 +6,6 @@
         <property name="connection.username">root</property>
         <property name="connection.password">Kr729467!!</property>
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.sda.pogodynka.backend.Location"/>
+        <mapping class="com.sda.pogodynka.backend.Location.Location"/>
     </session-factory>
 </hibernate-configuration>

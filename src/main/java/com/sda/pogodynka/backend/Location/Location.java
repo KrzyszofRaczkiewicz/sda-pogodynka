@@ -1,4 +1,4 @@
-package com.sda.pogodynka.backend;
+package com.sda.pogodynka.backend.Location;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +20,6 @@ public class Location {
     private String region;
     private String country;
 
-
     public Location(String city, float geoWidth, float geoHight, String region, String country) {
         this.city = city;
         this.geoWidth = geoWidth;
@@ -29,4 +28,23 @@ public class Location {
         this.country = country;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public float getGeoWidth() {
+        return geoWidth;
+    }
+
+    public float getGeoHight() {
+        return geoHight;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public String getCountry() {
+        return country;
+    }
 }

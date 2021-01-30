@@ -1,9 +1,9 @@
 package com.sda.pogodynka;
 
-import com.sda.pogodynka.backend.LocationController;
-import com.sda.pogodynka.backend.LocationDAO;
-import com.sda.pogodynka.backend.LocationDAOImpl;
-import com.sda.pogodynka.backend.LocationService;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sda.pogodynka.backend.Location.*;
+import com.sda.pogodynka.backend.Weather.WeatherClient;
 import com.sda.pogodynka.frontend.MenuClass;
 
 public class ApplicationWeather {
@@ -11,9 +11,13 @@ public class ApplicationWeather {
     private static final LocationController locationController;
 
     static {
+        ObjectMapper objectMapper = new ObjectMapper();
+        LocationMapper locationMapper = new LocationMapper();
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        WeatherClient weatherClient = new WeatherClient(objectMapper);
         LocationDAO locationDAO = new LocationDAOImpl();
         LocationService locationService = new LocationService(locationDAO);
-        locationController = new LocationController(locationService);
+        locationController = new LocationController(locationService, objectMapper, locationMapper);
     }
 
     public static void main(String[] args) {

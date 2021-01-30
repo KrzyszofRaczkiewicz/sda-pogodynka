@@ -1,9 +1,6 @@
 package com.sda.pogodynka.frontend;
 
-import com.sda.pogodynka.backend.Location;
-import com.sda.pogodynka.backend.LocationController;
-
-import java.util.Scanner; // todo unnecessary import
+import com.sda.pogodynka.backend.Location.LocationController;
 
 public class MenuClass {
 
