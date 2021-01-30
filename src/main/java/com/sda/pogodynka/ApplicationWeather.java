@@ -2,8 +2,8 @@ package com.sda.pogodynka;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sda.pogodynka.backend.Location.*;
-import com.sda.pogodynka.backend.Weather.WeatherClient;
+import com.sda.pogodynka.backend.location.*;
+import com.sda.pogodynka.backend.weather.WeatherClient;
 import com.sda.pogodynka.frontend.MenuClass;
 
 public class ApplicationWeather {

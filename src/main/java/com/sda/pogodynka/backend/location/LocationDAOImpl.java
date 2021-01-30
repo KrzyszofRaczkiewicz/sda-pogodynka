@@ -1,8 +1,6 @@
-package com.sda.pogodynka.backend.Location;
+package com.sda.pogodynka.backend.location;
 
 import com.sda.pogodynka.backend.HibernateUtils;
-import com.sda.pogodynka.backend.Location.Location;
-import com.sda.pogodynka.backend.Location.LocationDAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;

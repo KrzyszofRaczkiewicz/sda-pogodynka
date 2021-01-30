@@ -1,15 +1,6 @@
-package com.sda.pogodynka.backend.Weather;
+package com.sda.pogodynka.backend.weather;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 
 public class WeatherClient {
     private final ObjectMapper objectMapper;

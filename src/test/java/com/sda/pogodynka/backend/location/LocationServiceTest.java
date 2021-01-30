@@ -1,8 +1,9 @@
-package com.sda.pogodynka.backend;
+package com.sda.pogodynka.backend.location;
 
-import com.sda.pogodynka.backend.Location.Location;
-import com.sda.pogodynka.backend.Location.LocationDAO;
-import com.sda.pogodynka.backend.Location.LocationService;
+import com.sda.pogodynka.backend.LocationDAOMock;
+import com.sda.pogodynka.backend.location.Location;
+import com.sda.pogodynka.backend.location.LocationDAO;
+import com.sda.pogodynka.backend.location.LocationService;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -26,6 +27,11 @@ public class LocationServiceTest {
 
         // then
         assertThat(location).isNotNull();
+        assertThat(location.getCity()).isEqualTo("Gdansk");
+        assertThat(location.getRegion()).isEqualTo("Pomorskie");
+        assertThat(location.getCountry()).isEqualTo("Polska");
+        assertThat(location.getGeoHeight()).isEqualTo(40.0f);
+        assertThat(location.getGeoWidth()).isEqualTo(50.0f);
     }
 
     @Test
@@ -34,9 +40,8 @@ public class LocationServiceTest {
         Throwable throwable = catchThrowable(() -> locationService.createLocation(null, 40, 50, "Pomorskie", "Polska"));
 
         // then
-        assertThat(throwable).isInstanceOf(RuntimeException.class);
+        assertThat(throwable).isExactlyInstanceOf(RuntimeException.class);
     }
-
 
     @Test
     void createLocation_whenHeightIsMoreThan90_throwsAnException() {
@@ -44,7 +49,7 @@ public class LocationServiceTest {
         Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", 91, 50, "Pomorskie", "Polska"));
 
         // then
-        assertThat(throwable).isInstanceOf(RuntimeException.class);
+        assertThat(throwable).isExactlyInstanceOf(RuntimeException.class);
     }
 
     @Test
@@ -53,6 +58,6 @@ public class LocationServiceTest {
         Throwable throwable = catchThrowable(() -> locationService.createLocation("Gdansk", -91, 90, "Pomorskie", "Polska"));
 
         // then
-        assertThat(throwable).isInstanceOf(RuntimeException.class);
+        assertThat(throwable).isExactlyInstanceOf(RuntimeException.class);
     }
 }

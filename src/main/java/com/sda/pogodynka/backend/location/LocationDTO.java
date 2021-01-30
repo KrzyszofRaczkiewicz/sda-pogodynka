@@ -1,4 +1,4 @@
-package com.sda.pogodynka.backend.Location;
+package com.sda.pogodynka.backend.location;
 
 import lombok.Getter;
 import lombok.Setter;

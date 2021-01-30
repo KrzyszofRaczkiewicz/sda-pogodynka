@@ -1,4 +1,4 @@
-package com.sda.pogodynka.backend.Weather;
+package com.sda.pogodynka.backend.weather;
 
 public class WeatherDTO {
 

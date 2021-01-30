@@ -1,24 +1,19 @@
-package com.sda.pogodynka.backend.Location;
+package com.sda.pogodynka.backend.location;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 
+@RequiredArgsConstructor
 public class LocationController {
 
     private final LocationService locationService;
     private final ObjectMapper objectMapper;
     private final LocationMapper locationMapper;
 
-    public LocationController(LocationService locationService, ObjectMapper objectMapper, LocationMapper locationMapper) {
-        this.locationService = locationService;
-        this.objectMapper = objectMapper;
-        this.locationMapper = locationMapper;
-    }
-
     public String createNewLocation(String city, float height, float width, String region, String country) {
-
         Location newLocation = locationService.createLocation(city, height, width, region, country);
         LocationDTO locationDTO = locationMapper.reWriteLocation(newLocation);
         try {

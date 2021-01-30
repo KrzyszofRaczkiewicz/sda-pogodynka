@@ -1,6 +1,6 @@
 package com.sda.pogodynka.frontend;
 
-import com.sda.pogodynka.backend.Location.LocationController;
+import com.sda.pogodynka.backend.location.LocationController;
 
 public class MenuClass {
 

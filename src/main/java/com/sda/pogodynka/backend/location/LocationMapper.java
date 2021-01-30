@@ -1,4 +1,4 @@
-package com.sda.pogodynka.backend.Location;
+package com.sda.pogodynka.backend.location;
 
 public class LocationMapper {
 
@@ -7,7 +7,7 @@ public class LocationMapper {
         locationDTO.setCity(location.getCity());
         locationDTO.setCountry(location.getCountry());
         locationDTO.setGeoWidth(location.getGeoWidth());
-        locationDTO.setGeoHight(location.getGeoHight());
+        locationDTO.setGeoHight(location.getGeoHeight());
 
         if(!location.getRegion().isBlank()) locationDTO.setRegion(location.getRegion());
 
