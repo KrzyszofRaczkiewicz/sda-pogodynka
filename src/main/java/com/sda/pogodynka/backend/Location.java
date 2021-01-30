@@ -1,9 +1,14 @@
 package com.sda.pogodynka.backend;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Data
+@RequiredArgsConstructor
 public class Location {
 
     @Id
@@ -15,7 +20,6 @@ public class Location {
     private String region;
     private String country;
 
-    public Location(){}
 
     public Location(String city, float geoWidth, float geoHight, String region, String country) {
         this.city = city;
@@ -25,15 +29,4 @@ public class Location {
         this.country = country;
     }
 
-    @Override
-    public String toString() {
-        return "\nLocation{" +
-                "\nid=" + id +
-                "\ncity='" + city + '\'' +
-                ",\ngeoWidth=" + geoWidth +
-                ",\ngeoHight=" + geoHight +
-                ",\nregion='" + region + '\'' +
-                ",\ncountry='" + country + '\'' +
-                '}';
-    }
 }
